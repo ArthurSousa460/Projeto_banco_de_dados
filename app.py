@@ -31,3 +31,8 @@ def get_employes():
 def get_projects():
     data = query('SELECT * FROM projeto')
     return render_template('projetos.html', data=data)
+
+@app.get('/tel')
+def get_tel():
+    data = query('SELECT * FROM telefone')
+    return render_template('telefone.html', data = data)
